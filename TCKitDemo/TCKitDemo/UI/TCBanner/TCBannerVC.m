@@ -28,12 +28,10 @@
 }
 
 
-
 - (void)setupBanner {
-    TCBanner *banner = [[TCBanner alloc] init];
-    [self.view addSubview:banner];
     CGFloat y = [TCKDUIManager shareManager].navigationBar.height + [TCKDUIManager shareManager].statusBar.height;
-    banner.frame = CGRectMake(0, y, [TCKDUIManager shareManager].screen.width, 300);
+    TCBanner *banner = [[TCBanner alloc] initWithFrame:CGRectMake(0, y, [TCKDUIManager shareManager].screen.width, 300)];
+    [self.view addSubview:banner];
     banner.backgroundColor = [UIColor redColor];
 }
 
