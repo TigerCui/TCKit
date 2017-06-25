@@ -30,10 +30,11 @@
     [self addSubview:_scrollView];
     _scrollView.contentSize = CGSizeMake(self.frame.size.width * 5.0, self.frame.size.height);
     _scrollView.pagingEnabled = YES;
+    _scrollView.delegate = self;
     //添加广告图
     [self setupADSImageViewInScrollView:_scrollView];
     //设置定时器
-    [self setupTimer];
+    [self startTimer];
 }
 
 //添加广告图
@@ -73,7 +74,7 @@
 }
 
 //初始化定时器
-- (void)setupTimer {
+- (void)startTimer {
     __weak typeof(self) weakself = self;
     [[TCJX_GCDTimerManager sharedInstance] scheduledDispatchTimerWithName:@"banner_timer"
                                                              timeInterval:2.0
@@ -86,16 +87,52 @@
     }];
 }
 
+//停止timer
+- (void)stopTimer {
+    [[TCJX_GCDTimerManager sharedInstance] cancelTimerWithName:@"banner_timer"];
+}
+
 //滚动scroll view
 - (void)scrollScrollView {
     //获取当前scroll view显示的index
-     NSInteger index = round(_scrollView.contentOffset.x / _scrollView.frame.size.width);
-    if ((index + 1) > 4) {
-        [[TCJX_GCDTimerManager sharedInstance] cancelTimerWithName:@"banner_timer"];
-        return;
-    }
+    NSInteger index = round(_scrollView.contentOffset.x / _scrollView.frame.size.width);
     [_scrollView scrollRectToVisible:CGRectMake(_scrollView.frame.size.width * (index + 1), 0, _scrollView.frame.size.width, _scrollView.frame.size.height) animated:YES];
 }
+
+//scroll view 代理方法
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    [self stopTimer];
+}
+
+//- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+//    NSLog(@"拖拉结束");
+//    [self startTimer];
+//    [self didScrollEdge:scrollView];
+//}
+
+- (void)scrollViewDidEndScrollingAnimation:(UIScrollView *)scrollView {
+    NSLog(@"动画结束");
+    [self didScrollEdge:scrollView];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView {
+    NSLog(@"减速结束");
+    [self startTimer];
+    [self didScrollEdge:scrollView];
+}
+
+//滚动到边界时
+- (void)didScrollEdge:(UIScrollView *)scrollView {
+    NSInteger index = round(scrollView.contentOffset.x / scrollView.frame.size.width);
+    if (index == 4) {
+        [scrollView scrollRectToVisible:CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height) animated:NO];
+    }
+    if (index == 0) {
+        [scrollView scrollRectToVisible:CGRectMake(3 * scrollView.frame.size.width, 0, scrollView.frame.size.width, scrollView.frame.size.height) animated:NO];
+    }
+}
+
+//滚动到边界时如何处理
 
 - (void)dealloc {
     NSLog(@"Banner已销毁");

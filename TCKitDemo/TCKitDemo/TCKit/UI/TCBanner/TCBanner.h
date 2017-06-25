@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface TCBanner : UIView
+@interface TCBanner : UIView <UIScrollViewDelegate>
 
 @end
