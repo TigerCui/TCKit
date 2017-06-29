@@ -23,7 +23,7 @@ typedef NS_ENUM(NSInteger,TCBannerScrollDirection) {
     TCBannerScrollDirectionVerticalReverse
 };
 
-@protocol TCBanner <NSObject>
+@protocol TCBannerDelegate <NSObject>
 
 @optional
 /*
@@ -36,7 +36,7 @@ typedef NS_ENUM(NSInteger,TCBannerScrollDirection) {
 @end
 
 @interface TCBanner : UIView <UIScrollViewDelegate>
-
+@property (nonatomic ,weak) id <TCBannerDelegate> delegate;
 /*
  *  初始化方法
  *  @param  frame       banner的frame属性

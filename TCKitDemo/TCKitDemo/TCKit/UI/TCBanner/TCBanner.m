@@ -144,7 +144,11 @@
 }
 
 - (void)tapOnImageView:(UIImageView *)imageView {
-    
+    if (_delegate) {
+        if ([_delegate respondsToSelector:@selector(banner: didTapOnImageViewAtIndex:)]) {
+            [_delegate banner:self didTapOnImageViewAtIndex:imageView.tag];
+        }
+    }
 }
 
 //初始化定时器
