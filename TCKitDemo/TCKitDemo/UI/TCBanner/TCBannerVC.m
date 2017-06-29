@@ -29,7 +29,8 @@
 
 
 - (void)setupBanner {
-    NSArray *images = @[@"banner_0",@"banner_1",@"banner_2",@"banner_3",@"banner_4"];
+//    NSArray *images = @[@"banner_0",@"banner_1",@"banner_2",@"banner_3",@"banner_4"];
+    NSArray *images = @[@"banner_0"];
     CGFloat y = [TCKDUIManager shareManager].navigationBar.height + [TCKDUIManager shareManager].statusBar.height;
     TCBanner *banner = [[TCBanner alloc] initWithFrame:CGRectMake(0, y, [TCKDUIManager shareManager].screen.width, 300)
                                                 images:images
@@ -37,7 +38,6 @@
                                           timeInterval:2.0];
     //[[TCBanner alloc] initWithFrame:CGRectMake(0, y, [TCKDUIManager shareManager].screen.width, 300)];
     [self.view addSubview:banner];
-    banner.backgroundColor = [UIColor redColor];
 }
 
 - (void)didReceiveMemoryWarning {

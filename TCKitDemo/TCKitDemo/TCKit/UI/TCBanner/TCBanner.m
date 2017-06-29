@@ -41,18 +41,19 @@
     return self;
 }
 
-//- (instancetype)initWithFrame:(CGRect)frame{
-//    self = [super initWithFrame:frame];
-//    if (self) {
-//        [self setupScrollView];
-//    }
-//    return self;
-//}
+- (instancetype)init {
+    NSLog(@"请使用- (instancetype)initWithFrame: images: direction: timeInterval: 方法初始化TCBanner");
+    return nil;
+}
+
+- (instancetype)initWithFrame:(CGRect)frame {
+    NSLog(@"请使用- (instancetype)initWithFrame: images: direction: timeInterval: 方法初始化TCBanner");
+    return nil;
+}
 
 //初始化scroll view
 - (void)setupScrollView {
     self.scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, self.frame.size.width, self.frame.size.height)];
-    _scrollView.backgroundColor = [UIColor blueColor];
     [self addSubview:_scrollView];
     switch (_direction) {
         case TCBannerScrollDirectionHorizontal:
@@ -70,6 +71,8 @@
     }
     _scrollView.pagingEnabled = YES;
     _scrollView.delegate = self;
+    _scrollView.showsVerticalScrollIndicator = NO;
+    _scrollView.showsHorizontalScrollIndicator = NO;
     //添加广告图
     [self setupADSImageViewInScrollView:_scrollView];
 }
@@ -79,6 +82,7 @@
     if (_images.count > 1) {
         for (int i = 0; i < _images.count; i++) {
             UIImageView *imageView = [[UIImageView alloc] init];
+            imageView.tag = i;
             switch (_direction) {
                 case TCBannerScrollDirectionHorizontal:
                 case TCBannerScrollDirectionHorizontalReverse:
@@ -123,12 +127,24 @@
         [self startTimer];
     } else if (_images.count == 1) {
         UIImageView *imageView = [[UIImageView alloc] init];
+        imageView.tag = 0;
+        [scrollView addSubview:imageView];
         imageView.frame = CGRectMake(0, 0, self.frame.size.width, self.frame.size.height);
         NSString *image = _images[0];
         imageView.image = [UIImage imageNamed:image];
     } else {
         NSLog(@"%@",[NSString stringWithFormat:@"传入banner的图片数组中没有元素 %s",__func__]);
     }
+}
+
+//给广告图添加点击事件
+- (void)addTargetOnImageView:(UIImageView *)imageView {
+    UITapGestureRecognizer *tapGR = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapOnImageView:)];
+    [imageView addGestureRecognizer:tapGR];
+}
+
+- (void)tapOnImageView:(UIImageView *)imageView {
+    
 }
 
 //初始化定时器

@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+@class TCBanner;
 
 /*
  *  定义了banner的滚动方向
@@ -21,6 +22,18 @@ typedef NS_ENUM(NSInteger,TCBannerScrollDirection) {
     TCBannerScrollDirectionVertical,
     TCBannerScrollDirectionVerticalReverse
 };
+
+@protocol TCBanner <NSObject>
+
+@optional
+/*
+ *  点击banner中图片的代理方法
+ *  @param  banner  banner的引用
+ *  @param  index   点击图片的下标
+ */
+- (void)banner:(TCBanner *)banner didTapOnImageViewAtIndex:(NSInteger)index;
+
+@end
 
 @interface TCBanner : UIView <UIScrollViewDelegate>
 
