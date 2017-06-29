@@ -29,9 +29,11 @@ typedef NS_ENUM(NSInteger,TCBannerScrollDirection) {
  *  @param  frame       banner的frame属性
  *  @param  images      banner中要显示的图片数组,其中保存的是图片名
  *  @param  direction   banner自动滚动的方向
+ *  @param  interval    自动滚动时的时间间隔
  */
 - (instancetype)initWithFrame:(CGRect)frame
                        images:(NSArray *)images
-                    direction:(TCBannerScrollDirection)direction;
+                    direction:(TCBannerScrollDirection)direction
+                 timeInterval:(NSTimeInterval)interval;
 
 @end

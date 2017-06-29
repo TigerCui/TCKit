@@ -18,18 +18,25 @@
 
 @property (nonatomic,assign) TCBannerScrollDirection direction;
 
+@property (nonatomic,assign) NSTimeInterval interval;
+
 @end
 
 @implementation TCBanner
 
-
 #pragma mark - 初始化方法
 //万能初始化方法
-- (instancetype)initWithFrame:(CGRect)frame images:(NSArray *)images direction:(TCBannerScrollDirection)direction {
+- (instancetype)initWithFrame:(CGRect)frame
+                       images:(NSArray *)images
+                    direction:(TCBannerScrollDirection)direction
+                 timeInterval:(NSTimeInterval)interval
+{
     self = [super initWithFrame:frame];
     if (self) {
         _images = images;
         _direction = direction;
+        _interval = interval;
+        [self setupScrollView];
     }
     return self;
 }
@@ -128,7 +135,7 @@
 - (void)startTimer {
     __weak typeof(self) weakself = self;
     [[TCJX_GCDTimerManager sharedInstance] scheduledDispatchTimerWithName:@"banner_timer"
-                                                             timeInterval:2.0
+                                                             timeInterval:_interval
                                                                     queue:nil
                                                                   repeats:YES
                                                              actionOption:AbandonPreviousAction
@@ -196,7 +203,7 @@
         case TCBannerScrollDirectionHorizontalReverse:
         {
             NSInteger index = round(scrollView.contentOffset.x / scrollView.frame.size.width);
-            if (index == _images.count) {
+            if (index == _images.count - 1) {
                 [scrollView scrollRectToVisible:CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height) animated:NO];
             }
             if (index == 0) {
@@ -208,7 +215,7 @@
         case TCBannerScrollDirectionVerticalReverse:
         {
             NSInteger index = round(scrollView.contentOffset.y / scrollView.frame.size.height);
-            if (index == _images.count) {
+            if (index == _images.count - 1) {
                 [scrollView scrollRectToVisible:CGRectMake(0, 0, scrollView.frame.size.width, scrollView.frame.size.height) animated:NO];
             }
             if (index == 0) {

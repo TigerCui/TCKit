@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		015A0A811EFC039700B0630E /* TCJX_GCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 015A0A801EFC039700B0630E /* TCJX_GCDTimerManager.m */; };
 		01A4073F1EF811D90039AAE9 /* TCKDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A4073E1EF811D90039AAE9 /* TCKDViewController.m */; };
 		01A407421EF812D20039AAE9 /* TCKDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A407411EF812D20039AAE9 /* TCKDNavigationBar.m */; };
 		01A407451EF812E30039AAE9 /* TCKDStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A407441EF812E30039AAE9 /* TCKDStatusBar.m */; };
@@ -23,6 +22,7 @@
 		01D36E571EF6727F0049D0AD /* TCBanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D36E561EF6727F0049D0AD /* TCBanner.m */; };
 		01D36E5C1EF67B860049D0AD /* TCKDUIManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D36E5B1EF67B860049D0AD /* TCKDUIManager.m */; };
 		01D36E5F1EF680570049D0AD /* TCKDScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D36E5E1EF680570049D0AD /* TCKDScreen.m */; };
+		61E18E4B1F04DEC200AC91DA /* TCJX_GCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61E18E4A1F04DEC200AC91DA /* TCJX_GCDTimerManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,8 +43,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		015A0A7F1EFC039700B0630E /* TCJX_GCDTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCJX_GCDTimerManager.h; sourceTree = "<group>"; };
-		015A0A801EFC039700B0630E /* TCJX_GCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCJX_GCDTimerManager.m; sourceTree = "<group>"; };
 		01A4073D1EF811D90039AAE9 /* TCKDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCKDViewController.h; sourceTree = "<group>"; };
 		01A4073E1EF811D90039AAE9 /* TCKDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCKDViewController.m; sourceTree = "<group>"; };
 		01A407401EF812D20039AAE9 /* TCKDNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCKDNavigationBar.h; sourceTree = "<group>"; };
@@ -76,6 +74,8 @@
 		01D36E5B1EF67B860049D0AD /* TCKDUIManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCKDUIManager.m; sourceTree = "<group>"; };
 		01D36E5D1EF680570049D0AD /* TCKDScreen.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCKDScreen.h; sourceTree = "<group>"; };
 		01D36E5E1EF680570049D0AD /* TCKDScreen.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCKDScreen.m; sourceTree = "<group>"; };
+		61E18E491F04DEC200AC91DA /* TCJX_GCDTimerManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCJX_GCDTimerManager.h; sourceTree = "<group>"; };
+		61E18E4A1F04DEC200AC91DA /* TCJX_GCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCJX_GCDTimerManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,15 +103,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		015A0A7E1EFC039700B0630E /* Timer */ = {
-			isa = PBXGroup;
-			children = (
-				015A0A7F1EFC039700B0630E /* TCJX_GCDTimerManager.h */,
-				015A0A801EFC039700B0630E /* TCJX_GCDTimerManager.m */,
-			);
-			path = Timer;
-			sourceTree = "<group>";
-		};
 		01A4073C1EF8119F0039AAE9 /* base */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +214,7 @@
 		01D36E4F1EF670580049D0AD /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				61E18E461F04DE7100AC91DA /* Utils */,
 				01D36E501EF670580049D0AD /* TCBanner */,
 			);
 			path = UI;
@@ -233,7 +225,6 @@
 			children = (
 				01D36E551EF6727F0049D0AD /* TCBanner.h */,
 				01D36E561EF6727F0049D0AD /* TCBanner.m */,
-				015A0A7E1EFC039700B0630E /* Timer */,
 			);
 			path = TCBanner;
 			sourceTree = "<group>";
@@ -269,6 +260,32 @@
 			);
 			path = UIManager;
 			sourceTree = "<group>";
+		};
+		61E18E461F04DE7100AC91DA /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				61E18E471F04DE7100AC91DA /* ThirdParty */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		61E18E471F04DE7100AC91DA /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				61E18E481F04DEC200AC91DA /* Timer */,
+			);
+			path = ThirdParty;
+			sourceTree = "<group>";
+		};
+		61E18E481F04DEC200AC91DA /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				61E18E491F04DEC200AC91DA /* TCJX_GCDTimerManager.h */,
+				61E18E4A1F04DEC200AC91DA /* TCJX_GCDTimerManager.m */,
+			);
+			name = Timer;
+			path = TCKitDemo/TCKit/Utils/ThirdParty/Timer;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -408,11 +425,11 @@
 				01D36E481EF654230049D0AD /* TCKDTableViewController.m in Sources */,
 				01D36E541EF672270049D0AD /* TCBannerVC.m in Sources */,
 				01D36E571EF6727F0049D0AD /* TCBanner.m in Sources */,
-				015A0A811EFC039700B0630E /* TCJX_GCDTimerManager.m in Sources */,
 				01D36E4E1EF65E620049D0AD /* AppDelegate+TableViewData.m in Sources */,
 				01D36E431EF653A70049D0AD /* AppDelegate.m in Sources */,
 				01D36E5F1EF680570049D0AD /* TCKDScreen.m in Sources */,
 				01A407451EF812E30039AAE9 /* TCKDStatusBar.m in Sources */,
+				61E18E4B1F04DEC200AC91DA /* TCJX_GCDTimerManager.m in Sources */,
 				01A4073F1EF811D90039AAE9 /* TCKDViewController.m in Sources */,
 				01A407421EF812D20039AAE9 /* TCKDNavigationBar.m in Sources */,
 				01D36E5C1EF67B860049D0AD /* TCKDUIManager.m in Sources */,
