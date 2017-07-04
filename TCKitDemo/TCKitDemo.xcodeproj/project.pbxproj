@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0132F9281F0BCF82003BDFEC /* UIImage+TCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 0132F9271F0BCF82003BDFEC /* UIImage+TCExtension.m */; };
 		01A4073F1EF811D90039AAE9 /* TCKDViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A4073E1EF811D90039AAE9 /* TCKDViewController.m */; };
 		01A407421EF812D20039AAE9 /* TCKDNavigationBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A407411EF812D20039AAE9 /* TCKDNavigationBar.m */; };
 		01A407451EF812E30039AAE9 /* TCKDStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A407441EF812E30039AAE9 /* TCKDStatusBar.m */; };
@@ -45,6 +46,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0132F9261F0BCF82003BDFEC /* UIImage+TCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+TCExtension.h"; sourceTree = "<group>"; };
+		0132F9271F0BCF82003BDFEC /* UIImage+TCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+TCExtension.m"; sourceTree = "<group>"; };
 		01A4073D1EF811D90039AAE9 /* TCKDViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCKDViewController.h; sourceTree = "<group>"; };
 		01A4073E1EF811D90039AAE9 /* TCKDViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCKDViewController.m; sourceTree = "<group>"; };
 		01A407401EF812D20039AAE9 /* TCKDNavigationBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TCKDNavigationBar.h; sourceTree = "<group>"; };
@@ -308,6 +311,8 @@
 				61051F511F0A471E003E3294 /* NSDictionary+TCExtension.m */,
 				619AA4941F0B9B120092A09E /* UIColor+TCExtension.h */,
 				619AA4951F0B9B120092A09E /* UIColor+TCExtension.m */,
+				0132F9261F0BCF82003BDFEC /* UIImage+TCExtension.h */,
+				0132F9271F0BCF82003BDFEC /* UIImage+TCExtension.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -453,6 +458,7 @@
 				01D36E571EF6727F0049D0AD /* TCBanner.m in Sources */,
 				61051F4D1F0A457E003E3294 /* TCJX_GCDTimerManager.m in Sources */,
 				01D36E4E1EF65E620049D0AD /* AppDelegate+TableViewData.m in Sources */,
+				0132F9281F0BCF82003BDFEC /* UIImage+TCExtension.m in Sources */,
 				01D36E431EF653A70049D0AD /* AppDelegate.m in Sources */,
 				01D36E5F1EF680570049D0AD /* TCKDScreen.m in Sources */,
 				61051F521F0A471E003E3294 /* NSDictionary+TCExtension.m in Sources */,
