@@ -11,7 +11,9 @@
 @interface NSDictionary (TCExtension)
 
 /*
- *
+ *  从url中截取出参数
+ *  @param  url 需要分析的url
+ *  @return 将url中所有的参数以key-value的方式返回
  */
 + (NSDictionary *)tc_parametersFromUrl:(NSString *)url;
 

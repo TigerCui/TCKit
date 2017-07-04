@@ -24,6 +24,7 @@
 		01D36E5F1EF680570049D0AD /* TCKDScreen.m in Sources */ = {isa = PBXBuildFile; fileRef = 01D36E5E1EF680570049D0AD /* TCKDScreen.m */; };
 		61051F4D1F0A457E003E3294 /* TCJX_GCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61051F4C1F0A457E003E3294 /* TCJX_GCDTimerManager.m */; };
 		61051F521F0A471E003E3294 /* NSDictionary+TCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 61051F511F0A471E003E3294 /* NSDictionary+TCExtension.m */; };
+		619AA4961F0B9B120092A09E /* UIColor+TCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 619AA4951F0B9B120092A09E /* UIColor+TCExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		61051F4C1F0A457E003E3294 /* TCJX_GCDTimerManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TCJX_GCDTimerManager.m; sourceTree = "<group>"; };
 		61051F501F0A471E003E3294 /* NSDictionary+TCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+TCExtension.h"; sourceTree = "<group>"; };
 		61051F511F0A471E003E3294 /* NSDictionary+TCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TCExtension.m"; sourceTree = "<group>"; };
+		619AA4941F0B9B120092A09E /* UIColor+TCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TCExtension.h"; sourceTree = "<group>"; };
+		619AA4951F0B9B120092A09E /* UIColor+TCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TCExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -303,6 +306,8 @@
 			children = (
 				61051F501F0A471E003E3294 /* NSDictionary+TCExtension.h */,
 				61051F511F0A471E003E3294 /* NSDictionary+TCExtension.m */,
+				619AA4941F0B9B120092A09E /* UIColor+TCExtension.h */,
+				619AA4951F0B9B120092A09E /* UIColor+TCExtension.m */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -442,6 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				619AA4961F0B9B120092A09E /* UIColor+TCExtension.m in Sources */,
 				01D36E481EF654230049D0AD /* TCKDTableViewController.m in Sources */,
 				01D36E541EF672270049D0AD /* TCBannerVC.m in Sources */,
 				01D36E571EF6727F0049D0AD /* TCBanner.m in Sources */,
