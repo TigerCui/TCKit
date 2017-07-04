@@ -199,7 +199,6 @@
         }
             break;
     }
-    
 }
 
 //scroll view 代理方法
