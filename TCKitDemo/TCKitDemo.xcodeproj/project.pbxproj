@@ -26,6 +26,7 @@
 		61051F4D1F0A457E003E3294 /* TCJX_GCDTimerManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 61051F4C1F0A457E003E3294 /* TCJX_GCDTimerManager.m */; };
 		61051F521F0A471E003E3294 /* NSDictionary+TCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 61051F511F0A471E003E3294 /* NSDictionary+TCExtension.m */; };
 		619AA4961F0B9B120092A09E /* UIColor+TCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 619AA4951F0B9B120092A09E /* UIColor+TCExtension.m */; };
+		61AB231A1F0C882A00B4BE80 /* NSString+TCExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 61AB23191F0C882A00B4BE80 /* NSString+TCExtension.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		61051F511F0A471E003E3294 /* NSDictionary+TCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+TCExtension.m"; sourceTree = "<group>"; };
 		619AA4941F0B9B120092A09E /* UIColor+TCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+TCExtension.h"; sourceTree = "<group>"; };
 		619AA4951F0B9B120092A09E /* UIColor+TCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+TCExtension.m"; sourceTree = "<group>"; };
+		61AB23181F0C882A00B4BE80 /* NSString+TCExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+TCExtension.h"; sourceTree = "<group>"; };
+		61AB23191F0C882A00B4BE80 /* NSString+TCExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+TCExtension.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -309,6 +312,8 @@
 			children = (
 				61051F501F0A471E003E3294 /* NSDictionary+TCExtension.h */,
 				61051F511F0A471E003E3294 /* NSDictionary+TCExtension.m */,
+				61AB23181F0C882A00B4BE80 /* NSString+TCExtension.h */,
+				61AB23191F0C882A00B4BE80 /* NSString+TCExtension.m */,
 				619AA4941F0B9B120092A09E /* UIColor+TCExtension.h */,
 				619AA4951F0B9B120092A09E /* UIColor+TCExtension.m */,
 				0132F9261F0BCF82003BDFEC /* UIImage+TCExtension.h */,
@@ -460,6 +465,7 @@
 				01D36E4E1EF65E620049D0AD /* AppDelegate+TableViewData.m in Sources */,
 				0132F9281F0BCF82003BDFEC /* UIImage+TCExtension.m in Sources */,
 				01D36E431EF653A70049D0AD /* AppDelegate.m in Sources */,
+				61AB231A1F0C882A00B4BE80 /* NSString+TCExtension.m in Sources */,
 				01D36E5F1EF680570049D0AD /* TCKDScreen.m in Sources */,
 				61051F521F0A471E003E3294 /* NSDictionary+TCExtension.m in Sources */,
 				01A407451EF812E30039AAE9 /* TCKDStatusBar.m in Sources */,
