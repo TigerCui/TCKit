@@ -17,7 +17,7 @@
 + (UIImage *)tc_imageQRCodeWithString:(NSString *)qrCode size:(CGFloat)size;
 
 /** 修改图片尺寸
- *  @param  size    目标图片的尺寸
+ *  @param  size    图片的目标尺寸
  */
 - (UIImage *)tc_imageScaleToSize:(CGSize)size;
 
