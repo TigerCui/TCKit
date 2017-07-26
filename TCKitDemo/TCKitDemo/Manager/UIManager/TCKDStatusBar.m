@@ -11,7 +11,7 @@
 @implementation TCKDStatusBar
 
 - (CGFloat)height {
-    return 22.0;
+    return 20.0;
 }
 
 @end
